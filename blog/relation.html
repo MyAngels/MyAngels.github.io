@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系Me</title>
+    <link rel="icon" href="../images/022.ico"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #F1EEE7;
+        }
+
+        /*导航*/
+        nav {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 8px 2px #b8b8b8;
+            background: #fff;
+        }
+
+        nav > h3 {
+            margin-left: 30px;
+            color: #8E8E8E;
+            font-family: "游ゴシック", YuGothic, "メイリオ", "ヒラギノ角ゴ ProN W3";
+
+        }
+
+        .wrap{
+
+            margin:60px auto;
+            width:95%;
+            display: flex;
+            justify-content: space-around;
+            /*align-items: center;*/
+        }
+        .wrap>div{
+            text-align: center;
+            flex:1;
+        }
+        .wrap>div:hover{
+            box-shadow: 2px 4px 9px 4px #cecece;
+            background: #fff;
+
+        }
+        .Email{
+            padding-top:10px;
+            line-height:3;
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<nav>
+    <a href="../index.html"><img src="../images/blog/left.png" alt="返回"></a>
+    <h3>联系站长</h3>
+</nav>
+
+<!--微信-->
+<div class="wrap">
+    <div class="Wechat">
+       <h3>微信</h3>
+        <img src="../images/blog/WeChat1.png" alt="微信">
+    </div>
+    <div class="QQ">
+        <h3>QQ</h3>
+        <img src="../images/blog/QQ.png" alt="">
+    </div>
+    <div >
+        <h3>邮箱</h3>
+        <div class="Email">
+            <p>myangels0323@gmail.com<span>[优选]</span></p>
+            <p>myangels0323@163.com<span>[优选]</span></p>
+            <p>3268604623@qq.com</p>
+        </div>
+
+    </div>
+</div>
+
+<script src="../bootstrap/js/jquery-1.12.4.min.js"></script>
+
+</body>
+</html>

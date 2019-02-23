@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>飞机大战</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <!--<script src="../../../../../../Users/Public/Nwt/cache/recv/主管/fly/index.js"></script>-->
+</head>
+<body>
+<!--开始按钮-->
+<div id='play'>开始</div>
+<!--遮罩-->
+<div id="mask"></div>
+<!--结束面板-->
+<div class="result">
+    <h1>飞行时间</h1>
+    <div id="point_over">0</div>
+    <div id="grade">倔强青铜</div>
+    <div id="replace">重新开始</div>
+</div>
+<!--游戏区-->
+<section class="sec">
+    <header>
+        <div>分数：<span id="point">0</span></div>
+        <div>飞行时间：<span id="time">0</span>s</div>
+    </header>
+    <!--me的飞机-->
+    <article id="me"></article>
+</section>
+<section class="right_cont">
+    <span>玩家头像：</span>
+    <article id="tou_img">
+    	<img src="img/tianjia.png" id="tx"/>
+        <input type="file" id="file_img"/>
+    </article>
+    <br/>
+    <br/>
+    <span>玩家昵称：</span>
+    <input type="text" id="name" value="">
+    <div class="tall">
+        <div class="cishu">
+            分数清零次数：<span id="qing">0</span>次
+        </div>
+        <div class="zf">
+            总分
+        </div>
+        <div>
+            <span id="zf_val">0</span>
+        </div>
+    </div>
+</section>
+<script src="index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

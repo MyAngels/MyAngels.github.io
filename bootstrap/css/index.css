@@ -1,0 +1,389 @@
+body {
+    background: #F1EEE7;
+    height: 900px;
+    font-family: "游ゴシック", YuGothic, "メイリオ", "ヒラギノ角ゴ ProN W3";
+}
+
+* {
+    list-style: none;
+    font-size: 15px;
+    box-sizing: border-box;
+    cursor: url("../../images/cursor.png"), default;
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #f5f5f5;
+    border-left: 1px solid #d2d2d2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E3CA8A;
+    background-clip: padding-box;
+    border: 1px solid rgba(99, 99, 99, 0.64);
+    min-height: 28px;
+    border-radius: 3px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 1px solid rgba(99, 99, 99, 0.64);
+    background-color: #E3CA8A;
+
+}
+
+::-webkit-scrollbar-thumb:active {
+    border: 1px solid rgba(99, 99, 99, 0.64);
+    background-color: #E3CA8A;
+}
+.home{
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.practice{
+    position: absolute;
+    top:30px;
+    left:0;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
+
+}
+/*LOGO*/
+.logo {
+    margin-top: 15px;
+    width: 180px;
+    height: 90px;
+    max-width: 567px;
+    max-height: 281px;
+}
+
+.hide {
+    top: -120px;
+}
+
+/*Nav导航*/
+.navbar {
+    background: #ffffff;
+    padding-left: 130px;
+}
+
+#bs-example-navbar-collapse-1 {
+    padding-right: 130px;
+}
+
+.navbar-right {
+    margin-top: 40px;
+}
+
+.navbar-right > li {
+    text-align: center;
+    width: 165px;
+}
+
+/*轮播*/
+#Carousel {
+    padding: 0;
+    float: left;
+    height: 580px;
+    position: relative;
+}
+
+#Carousel .onePage {
+    position: absolute;
+    display: none;
+
+}
+
+#Carousel #onePage {
+    display: block;
+}
+
+#Carousel #right {
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+/*轮播圆点*/
+#icon {
+    position: absolute;
+    right: 80px;
+    line-height: 65px;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 8000;
+}
+
+#icon span {
+    display: inline-block;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #d2d2d2;
+    /*border-radius: 50%;*/
+}
+
+.icon_a {
+    background: rgba(197, 86, 75, 0.29);
+}
+
+/*简历主页*/
+
+/*头像*/
+.home {
+    position: relative;
+    margin-top: 160px;
+    align-items: flex-end;
+}
+
+.Bio > img {
+    max-width: 70%;
+    max-height: 80%;
+}
+
+/*摘要*/
+/*第一部分*/
+.resume > div:nth-of-type(1) > menu {
+    font-size: 15.5px;
+    line-height: 30px;
+    letter-spacing: 5px;
+    color: #646464;
+}
+
+strong {
+    font-weight: normal;
+}
+
+/*第二部*/
+#Carousel #TwoPage > menu {
+    letter-spacing: 1.2px;
+    line-height: 1.6;
+    font-size: 15.5px;
+    color: #646464;
+}
+
+#TwoPage menu strong {
+    color: #cda928;
+    font-weight: bold;
+}
+
+#TwoPage menu li:nth-of-type(1) {
+    margin: -25px 0 10px 0;
+}
+
+#TwoPage .active p {
+    background: url("../../images/五角星.png") no-repeat;
+    padding-left: 30px;
+}
+
+/*第三部分*/
+.Project {
+    line-height: 2;
+    color: #646464;
+}
+
+.Project h4 {
+    color: #cda928;
+}
+
+.Project li {
+    text-indent: 10px;
+}
+
+.photo img {
+    margin-right: 20px;
+    float: left;
+    max-width: 16%;
+    max-height: 16%;
+    vertical-align: bottom;
+}
+
+.Project:nth-of-type(2) div span:nth-of-type(1) {
+    font-size: 18px;
+    color: #cda928;
+}
+
+/*技能*/
+.resume {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+.resume > .icon menu {
+    padding: 0;
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.text-center > a > img:hover {
+    opacity: 0.8;
+}
+
+.resume > .icon menu li a img {
+    width: 100%;
+}
+
+/*footer*/
+footer {
+    height: 75px;
+    margin-top: 80px;
+    background: #556B2F;
+    box-shadow: 0 2px 10px 3px gray;
+    color: #f1eee7;
+}
+
+footer ul {
+    padding: 0;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > ul li {
+    letter-spacing: 1.5px;
+    height: 40px;
+    padding: 8px 0 0 45px;
+    list-style: none;
+}
+
+footer ul > li:nth-child(1) {
+    background: url("../../images/邮箱.png") no-repeat;
+}
+
+footer ul > li:nth-child(2) {
+    background: url("../../images/微信3.png") no-repeat;
+}
+
+footer ul > li:nth-child(3) {
+    padding: 8px 0 0 35px;
+    background: url("../../images/wifi.png") no-repeat;
+}
+
+footer ul > li:nth-child(4) {
+    background: url("../../images/电话.png") no-repeat;
+}
+
+footer a {
+    color: #f1eee7;
+}
+
+footer a:hover {
+    color: #E3CA8A;
+    transition: color .2s;
+    text-decoration: none;
+}
+footer >p {
+    display: none;
+}
+#bottom {
+    display: none;
+}
+
+/*媒体查询*/
+@media (min-width: 997px) {
+    .Bio > img {
+        position: relative;
+        bottom: -60px;
+    }
+}
+
+@media (min-width: 768px)and (max-width: 1087px) {
+    .navbar, #bs-example-navbar-collapse-1 {
+        padding: 0;
+    }
+
+    .navbar-right > li {
+        text-align: center;
+        width: 130px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar-right {
+        margin: 0;
+    }
+
+    .navbar-right li {
+        width: 120px;
+    }
+
+    /*footer*/
+    footer {
+        background: #918F91;
+        height: 80px;
+        box-shadow: none;
+    }
+
+    footer ul {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    footer ul li {
+        width: 255px;
+    }
+
+    footer ul > li:nth-child(3) {
+        display: none;
+    }
+
+    footer ul > li:nth-child(4) {
+        display: none;
+
+    }
+}
+
+@media (max-width: 604px) {
+    .home {
+        margin-top: 80px;
+    }
+    footer {
+        margin-top: 20px;
+    }
+
+    .logo {
+        width: 30%;
+        height: 20%;
+    }
+}
+
+@media (max-width: 420px) {
+    footer {
+        margin-top: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    footer ul {
+        display: none;
+    }
+
+    footer > p {
+        display: block;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+

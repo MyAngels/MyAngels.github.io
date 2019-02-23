@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>《活着》读后感</title>
+    <link rel="icon" href="../../images/022.ico"/>
+    <link rel="stylesheet" href="../../bootstrap/css/blog.css">
+    <link rel="stylesheet" href="../../bootstrap/css/alive.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/css/alive.css">
+
+</head>
+<!--<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">-->
+<aside id="sidebar" class="">
+    <!--侧边栏-->
+    <nav id="tags">
+        <!--头像-->
+        <a href="../blog.html" id="header">
+            <img src="../../images/bio.jpg" alt="头像">
+            <span>南风知我意</span>
+        </a>
+        <!--菜单-->
+        <ul id="tags_ul">
+            <li id="tags_li">
+                <div class="read">
+                    <div class="" style="display: block;">
+                        <ul>
+                            <li class="group">
+                                <button class="accordion">书海无涯</button>
+                                <div class="panel1">
+                                    <p><a href="alive.html">活着读后感</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">日常博文</button>
+                                <div class="panel1">
+                                    <p><a href="../article/360.html">360°旋转</a></p>
+                                    <p><a href="../article/BooK-superMarket.html">jquery小练习</a></p>
+                                    <p><a href="../article/animate.html">animate动画</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">前端面试题</button>
+                                <div id="foo" class="panel1">
+                                    <p><a href="../test/Web-theory.html">Web理论</a></p>
+                                    <p><a href="../test/Web-skill.html">Web技能原理</a></p>
+                                    <p><a href="../test/CSS3.html">CSS系列</a></p>
+                                    <p><a href="../test/HTML5.html">HTMl5系列</a></p>
+                                    <p><a href="../test/JS-test.html">JS系列</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">向JS致敬</button>
+                                <div id="" class="panel1">
+                                    <p><a href="#">es6学习</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--分享链接-->
+        <ul class="icon">
+            <li class="icon_a"><a href="https://github.com/MyAngels" target="_blank"><img src="../../images/blog/github.png" alt="gitHub"></a></li>
+            <li class="icon_a"><a href="add_me.html"><img src="../../images/blog/微信.png" alt="微信"></a></li>
+            <li class="icon_a"><a href="mailto:3268604623@qq.com"><img src="../../images/blog/邮箱.png" alt="邮箱"></a></li>
+        </ul>
+    </nav>
+</aside>
+<!--end aside-->
+<section>
+    <!--观感分享-->
+    <div class="enjoy">
+        <p><img src="../../images/BooK/enjoy.jpg" alt="Welcome"></p>
+        <p><a href="#" id="icon-row" class="icon-row"></a></p>
+    </div>
+    <!--封面-->
+    <div class="content ">
+        <ul class="ul aos-init">
+            <li class="first">
+                <p><img src="../../images/BooK/活着.jpg" alt="Welcome"></p>
+            </li>
+        </ul>
+    </div>
+    <!--article-->
+    <div class="footer">
+        <h4>《活着》</h4>
+        <p>作为一个词语，“活着” 在我们中国的语言里充满了力量，它的力量不是来自于喊叫，也不是来自于进攻，而是忍受，去忍受生命赋予我们的责任，去忍受现实给予我们的幸福和苦难、无聊和平庸。</p>
+        <h4>啊miao吐血心得</h4>
+        <p>在读完这本书的很长一段时间里，我恍恍惚惚的都无法平静 或许自己是个泪点比较低的人，
+            每当看到最后两章的时候，不仅感觉感叹世事无常和生活中的辛酸。
+        </p>
+
+        <p>作者说只为了活着而活着，而不是为了活着以外的事情而活着，我总觉得
+            如果我只为了活着本身而去生活，很聪明的避开世俗烦恼，那我们活着是为了什么呢？
+            我们这么做真的就是尊重生命了吗？
+            如果我在世界上像一粒微尘，其价值微不足道，我或许会为自己感到伤心.</p>
+
+        <div class="two">
+            <p>现在已经是不同的时代了，我们生不带来，死不带走。还是要留下些有价值的东西作为到此一游的印证！</p>
+            <br/>
+        </div>
+        <hr>
+        <div class="three">
+            <p>Data:2018 . 6 / 12</p>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../bootstrap/js/jquery-1.12.4.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+    // jQuery部分
+    $(function () {
+        // 切换页面
+        $("#icon-row").on("click", function () {
+            $("#sidebar").toggleClass("fullscreen");
+            $(this).toggleClass("icon_row_a");
+        });
+
+        //aside 菜单
+        $(".accordion").mousedown(function () {
+            $(this).siblings(".panel1").slideToggle(500).parent()
+                .siblings().children(".panel1").slideUp(500);
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

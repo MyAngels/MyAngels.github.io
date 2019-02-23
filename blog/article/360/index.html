@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+
+</head>
+
+<body>
+
+<img id="img1" src="img/miaov (0).jpg"/>
+
+<script>
+    window.onload = function () {
+        //设置虚拟点
+        var x = 0;
+        var oImg = document.getElementById('img1');
+        var aImg = document.getElementsByTagName('img');
+        //定义最后一张图片用于显示
+        var oLastImg = oImg;
+        //定义速度
+        var lastX = 0;
+        var iSpeed = 0;
+        var timer = null;
+        var i = 0;
+        // JS手动添加图片喽
+        for (i = 1; i < 77; i++) {
+            //图片预加载
+            (function (oNewImg) {
+                var oImg = new Image();
+                oImg.onload = function () {
+                    oNewImg.src = this.src;
+                };
+                oImg.src = 'img/miaov (' + i + ').jpg';
+                oNewImg.style.display = 'none';
+                document.body.appendChild(oNewImg);
+            })(document.createElement('img'));
+        }
+
+        document.onmousedown = function (ev) {
+            var oEvent = ev || event;
+            var disX = oEvent.clientX - x;
+
+            clearInterval(timer);
+            //配合鼠标移动显示图片完成连续效果
+            document.onmousemove = function (ev) {
+                var oEvent = ev || event;
+                x = oEvent.clientX - disX;
+                move();
+                iSpeed = x - lastX;
+                lastX = x;
+                return false;
+            };
+
+            document.onmouseup = function () {
+                document.onmousemove = null;
+                document.onmouseup = null;
+
+                document.title = iSpeed;
+                //设置定时器完成缓速停止
+                timer = setInterval(function () {
+                    x += iSpeed;
+                    move();
+                }, 30);
+            };
+
+            //连续图片效果
+            function move() {
+                if (iSpeed > 0) {
+                    iSpeed--;
+                } else {
+                    iSpeed++;
+                }
+                if (iSpeed == 0) {
+                    clearInterval(timer);
+                }
+                var l = parseInt(-x / 10);
+                if (l > 0) {
+                    l = l % 77;
+                } else {
+                    l = l + -Math.floor(l / 77) * 77;
+                }
+                document.title = iSpeed;
+                if (oLastImg != aImg[l]) {
+                    oLastImg.style.display = 'none';
+                    aImg[l].style.display = 'block';
+                    oLastImg = aImg[l];
+                }
+            }
+
+            return false;
+        };
+    };
+</script>
+
+<!--<script>-->
+<!--window.onload = function () {-->
+<!--var oImg = document.getElementById("img1");-->
+<!--var aImg = document.getElementsByTagName("img");-->
+<!--//为了提高性能 只让最后一个img显示 oLastImg最后一张图片-->
+<!--var oLastImg = oImg;-->
+<!--//虚拟的点-->
+<!--var x = 0;-->
+<!--var i = 0;-->
+<!--var lastX = 0;-->
+<!--var iSpeed = 0;-->
+<!--var timer = null;-->
+<!--//松开鼠标继续运动并缓缓停止-->
+
+
+<!--//进行循环解决添加img导致的页面卡顿问题】、-->
+<!--//让img的样式进行显示隐藏，而不是直接添加img-->
+<!--for (i = 1; i < 77; i++) {-->
+<!---->
+<!--//重点：图片预加载-->
+<!--(function () {-->
+<!--var oImg =new Image();-->
+
+<!--var oNewImg = document.createElement('img');-->
+<!--oImg.onload = function(){-->
+<!--oNewImg.src=this.src;-->
+<!--};-->
+<!--oImg.src= 'img/miaov (' + i + ').jpg';-->
+<!--oNewImg.style.display = 'none';-->
+<!--document.body.appendChild(oNewImg);-->
+<!--})();-->
+<!--}-->
+
+<!--document.onmousedown = function (ev) {-->
+<!--var oEvent = ev || event;-->
+<!--var disX = oEvent.clientX - x;-->
+<!---->
+<!--clearInterval(timer);-->
+<!--document.onmousemove = function (ev) {-->
+<!--var oEvent = ev || event;-->
+<!--x = oEvent.clientX - disX;-->
+<!--move();-->
+<!--iSpeed = x - lastX;-->
+<!--lastX = x;-->
+<!--//兼容IE阻止图片被选中-->
+<!--return false;-->
+<!--};-->
+<!--document.onmouseup = function () {-->
+<!--document.onmousemove = null;-->
+<!--document.onmouseup = null;-->
+
+<!--document.title = iSpeed;-->
+
+<!--timer = setInterval(function () {-->
+<!--x += iSpeed;-->
+<!--move();-->
+<!--}, 30);-->
+
+
+<!--};-->
+<!--function move() {-->
+<!--if (iSpeed > 0) {-->
+<!--iSpeed&#45;&#45;;-->
+<!--} else {-->
+<!--iSpeed++;-->
+<!--}-->
+<!--if (iSpeed === 0) {-->
+<!--clearInterval(timer);-->
+<!--}-->
+<!--var l = parseInt(-x / 10);-->
+<!--if (l > 0) {-->
+<!--l = -x % 77;-->
+<!--}-->
+<!--else {-->
+<!--l = -x + -Math.floor(-x / 77) * 77;-->
+<!--}-->
+<!--document.title = iSpeed;-->
+<!--//当鼠标拖动的时候添加图片-->
+<!--// 存在为负数时图片会不显示问题-->
+<!--// oImg.src = 'img/miaov (' + l + ').jpg';-->
+
+<!--if (oLastImg != aImg[l]) {-->
+<!--oLastImg.style.display = 'none';-->
+<!--aImg[l].style.display = 'block';-->
+<!--oLastImg = aImg[l];-->
+<!--}-->
+<!--}-->
+<!--//阻止图片被选中-->
+<!--return false;-->
+<!--};-->
+
+<!--};-->
+
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS-test</title>
+    <link rel="icon" href="../../images/022.ico"/>
+    <link rel="stylesheet" href="../../bootstrap/css/blog.css">
+    <link rel="stylesheet" href="../../bootstrap/css/alive.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<!--aside-->
+<aside id="sidebar" class="">
+    <!--侧边栏-->
+    <nav id="tags">
+        <!--头像-->
+        <a href="../blog.html" id="header">
+            <img src="../../images/bio.jpg" alt="头像">
+            <span>南风知我意</span>
+        </a>
+        <!--菜单-->
+        <ul id="tags_ul">
+            <li id="tags_li">
+                <div class="read">
+                    <div class="" style="display: block;">
+                        <ul>
+                            <li class="group">
+                                <button class="accordion">书海无涯</button>
+                                <div class="panel1">
+                                    <p><a href="../book/alive.html">活着感想</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">日常博文</button>
+                                <div class="panel1">
+                                    <p><a href="../article/360.html">物体360°旋转</a></p>
+                                    <p><a href="../article/BooK-superMarket.html">jquery小练习</a></p>
+                                    <p><a href="../article/animate.html">animate动画</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">前端面试题</button>
+                                <div id="foo" class="panel1">
+                                    <p><a href="Web-theory.html">Web理论</a></p>
+                                    <p><a href="Web-skill.html">Web技能原理</a></p>
+                                    <p><a href="CSS3.html">CSS系列</a></p>
+                                    <p><a href="HTML5.html">HTMl5系列</a></p>
+                                    <p><a href="JS-test.html">JS系列</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">向JS致敬</button>
+                                <div id="" class="panel1">
+                                    <p><a href="#">es6学习</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--分享链接-->
+        <ul class="icon">
+            <li class="icon_a"><a href=""><img src="../../images/blog/github.png" alt="gitHub"></a></li>
+            <li class="icon_a"><a href="../book/add_me.html"><img src="../../images/blog/微信.png" alt="微信"></a></li>
+            <li class="icon_a"><a href="mailto:3268604623@qq.com"><img src="../../images/blog/邮箱.png" alt="邮箱"></a></li>
+        </ul>
+    </nav>
+</aside>
+<!--end aside-->
+
+<!--section-->
+<section>
+    <div class="enjoy">
+        <h3>JS基础面试题大全</h3>
+        <p><a href="#" id="icon-row" class="icon-row"></a></p>
+    </div>
+    <div class="details">
+        <h4>1.Js中的基本类型</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li class="sign">JavaScript 有类型值，但没有类型变量。JavaScript 提供了以下几种内置类型：</li>
+                <li>string 字符串</li>
+                <li>number 数字</li>
+                <li>boolean 布尔值</li>
+                <li>null 和 undefined</li>
+                <li>object</li>
+                <li>symbol (ES6 中新增的)</li>
+            </ul>
+            <p><span class="sign">Symbol：</span></p>
+            <p><span>引入原因：</span>ES5的对象属性名都是字符串，很容易造成属性名冲突。比如，使用了一个他人提供的对象，
+                想为这个对象添加新的方法，新方法的名字就有可能与现有方法产生冲突。ES6中Symbol的引入保证了每一个属性的名字都是
+                独一无二的，从根本上防止了属性名的冲突
+            </p>
+            <p>
+                <a href="http://es6.ruanyifeng.com/#docs/symbol#%E4%BD%9C%E4%B8%BA%E5%B1%9E%E6%80%A7%E5%90%8D%E7%9A%84-Symbol">Symbol具体参考-></a>
+            </p>
+            <p><span>js数据类型分类:</span> ES6又推出了Symbol数据类型</p>
+            <img src="images/JS.png" alt="JS数据类型">
+            <p class="sign">注：把基本类型进行包装(包装基本类型)就成了引用类型</p>
+        </div>
+        <h4>2.基本类型和引用类型的区别</h4>
+        <div class="Web">
+            <p class="sign">存储</p>
+            <p>基本类型值在内存中占据固定大小的空间,因此被保存在栈内存中</p>
+            <p>引用类型的值是对象, 保存在堆内存中. 包含引用类型的变量实际上包含的并不是对象本身, 而是一个指向改对象的指针</p>
+            <p class="sign">复制</p>
+            <p><span class="sign">基本类型的值</span>从一个变量向另一个变量复制 会创建这个值的一个副本</p>
+            <img src="images/copy-inn.png" alt="基本类型">
+            <p><span class="sign">引用类型的值</span> 从一个变量向另一个变量复制复制的其实是指针,　因此两个变量最终都指向同一个对象</p>
+            <img src="images/copy-pile.png" alt="引用类型">
+            <p class="sign">检测类型</p>
+            <p>确定一个值是哪种基本类型可以用typeof操作符,</p>
+            <p>而确定一个值是哪种引用类型可以使用instanceof操作符</p>
+            <p class="sign">区别图解分析</p>
+            <img src="images/inn.png" alt="基本类型">
+            <img src="images/pile.png" alt="引用类型">
+        </div>
+        <h4>3.JS中的强制转型是指什么？</h4>
+        <div class="Web">
+            <p>在 JavaScript 中，两种不同的内置类型间的转换被称为强制转型。强制转型在 JavaScript 中有两种形式：显式和隐式。</p>
+            <img src="images/block.png" alt="显式">
+            <img src="images/hidden.png" alt="隐式">
+        </div>
+        <h4>4.解释JS中的相等性?</h4>
+        <div class="Web">
+            <p>JavaScript 中有严格比较和类型转换比较:</p>
+            <p>严格比较（例如 ===）在不允许强制转型的情况下检查两个值是否相等；</p>
+            <p>抽象比较（例如 ==）在允许强制转型的情况下检查两个值是否相等</p>
+            <img src="images/equi.png" alt="相等性">
+            <p>如果被比较的任何一个值可能是 true 或 false，要用 ===，而不是 ==；</p>
+            <p>如果被比较的任何一个值是这些特定值（0、“”或 []），要用 ===，而不是 ==；</p>
+            <p>在其他情况下，可以安全地使用 ==。它不仅安全，而且在很多情况下，它可以简化代码，并且提升代码可读性。</p>
+
+        </div>
+        <h4>5.解释Javascript中的Null和undefined以及not defined？</h4>
+        <div class="Web">
+            <p>JavaScript 中有两种底层类型：null 和 undefined。它们代表了不同的含义：</p>
+            <p>undefined是javascript语言中定义的五个原始类中的一个，换句话说，undefined并不是程序报错，
+                而是程序允许的一个值。undefined是一个类，这个类只有一个值就是undefined</p>
+            <p>尚未初始化的东西(变量)：undefined；(相当于一个空字符串)</p>
+            <p>目前不可用的东西：null。(相当于0)</p>
+            <p>not defined(未定义)</p>
+            <img src="images/undefined.png" alt="undefined">
+            <img src="images/null.png" alt="null">
+        </div>
+        <h4>6.调用函数的几种方法</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li>方法调用模型 var obj = { func : function(){};} obj.func()</li>
+                <li>函数调用模式　　var func = function(){} func();</li>
+                <li>构造器(构造函数)调用模式</li>
+                <li>apply/ call调用模式</li>
+            </ul>
+        </div>
+        <h4>7.apply和call调用模式的区别</h4>
+        <div class="Web">
+            <p>call和apply的功能基本相同，都是实现继承或者转换对象指针的作用；
+                唯一不通的是前者参数是罗列出来的，后者是存到数组中的；
+                call或apply功能就是实现继承的；与面向对象的继承extends功能相似；但写法不同</p>
+            <img src="images/Call.png" alt="Call方法">
+            <img src="images/apply.png" alt="apply方法">
+            <p><span>使用apply的情况：</span>在给对象参数的情况下,如果参数的形式是数组的时候,比如apply示例里面传递了参数arguments,这个参数是数组类型</p>
+            <p><span>使用call的情况：</span>当两个对象的参数列表个数不相同时，可以使用call方法</p>
+        </div>
+        <h4>8.创建函数的几种方法</h4>
+        <div class="Web">
+            <p class="sign">1.函数式声明</p>
+            <img src="images/fun.png" alt="函数式">
+            <p class="sign">2.函数表达式(函数字面量)</p>
+            <img src="images/function.png" alt="表达式">
+            <p class="sign">3.构造函数</p>
+            <img src="images/function1.png" alt="构造函数">
+            <p class="sign">4.对象直接量</p>
+            <img src="images/function2.png" alt="对象直接量">
+            <p class="sign">5.原型继承</p>
+            <img src="images/function3.png" alt="原型">
+            <p class="sign">6.工厂模式</p>
+            <img src="images/function4.png" alt="工厂">
+            <a href="https://segmentfault.com/a/1190000012200022">优秀参考-></a>
+        </div>
+        <h4>9.解释事件冒泡又如何阻止</h4>
+        <div class="Web">
+            <p>①从目标元素开始，往顶层元素传播。途中如果有节点绑定了相应的事件处理函数，这些函数都会被一次触发。</p>
+            <p>②如果想阻止事件起泡，可以使用e.stopPropagation()（Firefox）或者e.cancelBubble=true（IE）来组织事件的冒泡传播。</p>
+        </div>
+        <h4>10.解释下js中的this是怎么工作的?</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li class="sign">this 在 JavaScript 中主要由以下五种使用场景。</li>
+                <li>作为函数调用，this 绑定全局对象，浏览器环境全局对象为 window 。</li>
+                <li>内部函数的 this 也绑定全局对象，应该绑定到其外层函数对应的对象上，这是 JavaScript的缺陷，用that替换。</li>
+                <li>作为构造函数使用，this 绑定到新创建的对象。</li>
+                <li>作为对象方法使用，this 绑定到该对象。</li>
+                <li>使用apply或call调用 this 将会被显式设置为函数调用的第一个参数。</li>
+            </ul>
+        </div>
+        <h4>11.js作用域和作用域链</h4>
+        <div class="Web">
+            <p class="sign">作用域:最外层函数和在最外层函数外面定义的变量拥有全局作用域</p>
+            <img src="images/spoce.png" alt="作用域">
+            <p class="sign">作用域链：在试图访问一个变量时JS引擎会从当前作用域开始向上查找直到Global全局作用域停止。
+                至于为什么叫链, 可以理解为和链表有相似之处, 深层的作用域会能够访问到上层作用域, 就如同链表中两个连续节点能够单向访问一样。</p>
+            <img src="images/spoce1.png" alt="作用域链">
+        </div>
+        <h4>12.js中如何实现块级作用域</h4>
+        <div class="Web">
+            <p class="sign">①使用匿名函数,(立即执行函数 IIFE):</p>
+            <p>(function(){...})()</p>
+            <p class="sign">②或者es6</p>
+            <p>③块级作用域引入了两种新的声明形式,可以用它们定义一个只存在于某个语句块中的变量或常量.这两种新的声明关键字为:</p>
+            <p>④let: 语法上非常类似于var, 但定义的变量只存在于当前的语句块中</p>
+            <p>⑤const: 和let类似,但声明的是一个只读的常量</p>
+            <p>⑥使用let代替var可以更容易的定义一个只在某个语句块中存在的局部变量,而不用担心它和函数体中其他部分的同名变量有冲突.
+                在let语句内部用var声明的变量和在let语句外部用var声明的变量没什么差别,它们都拥有函数作用域,而不是块级作用域.
+            </p>
+        </div>
+        <h4>13.DOM对象</h4>
+        <div class="Web">
+            <p> ①DOM是针对HTML和XML文档的一个API(应用程序编程接口). DOM描绘了一个层次化的节点树, 允许开发人员添加, 移除和修改页面的某一部分.</p>
+            <img src="images/DOM.png" alt="DOM对象">
+        </div>
+        <h4>14.DOM操作——怎么添加，移动，复制，创建和查找节点</h4>
+        <div class="Web">
+            <img src="images/DOM-handle.png" alt="DOM操作">
+        </div>
+        <h4>15.什么是IIFE(立即调用函数表达式)</h4>
+        <div class="Web">
+            ①它是立即调用函数表达式（Immediately-Invoked Function Expression），简称 IIFE。函数被创建后立即被执行：
+            <img src="images/IIFE.png" alt="IIFE">
+            <p>②在避免污染全局命名空间时经常使用这种模式，因为 IIFE（与任何其他正常函数一样）内部的所有变量在其作用域之外都是不可见的。</p>
+        </div>
+        <h4>16.解释下为什么接下来这段代码不是 IIFE(立即调用的函数表达式)：function foo(){ }();?</h4>
+        <a href="https://github.com/Wscats/Good-text-Share/issues/85">经典面试题-></a>
+        <div class="Web">
+            <p>①而函数定义（语句以function关键字开始）是不能被立即执行的，这无疑会导致语法的错误（SyntaxError）。当函数定义代码段包裹在括号内，使解析器可以将之识别为函数表达式，然后调用。IIFE:
+                (function foo(){})()　</p>
+            <p>②区分 (function(){})(); 和 (function(){}()); 其实两者实现效果一样。</p>
+            <p><span class="sign">★函数字面量：</span>首先声明一个函数对象，然后执行它。(function () { alert(1); })();</p>
+            <p><span class="sign">★优先表达式：</span>由于Javascript执行表达式是从圆括号里面到外面，所以可以用圆括号强制执行声明的函数。(function () { alert(2);
+                }());</p>
+        </div>
+        <h4>17."use strict" 的作用</h4>
+        <div class="Web">
+            在所有的函数 (或者所有最外层函数) 的开始处加入 "use strict"; 指令启动严格模式。
+            <img src="images/use-strict.png" alt="use-strict">
+            它会抛出一个错误，因为 x 没有被定义，
+            并使用了全局作用域中的某个值对其进行赋值，而 use strict 不允许这样做。下面的小改动修复了这个错误：
+            <img src="images/use-strict1.png" alt="use-strict1">
+            <p>★优点:</p>
+            <p> ①消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
+                ② 消除代码运行的一些不安全之处，保证代码运行的安全；
+                ③提高编译器效率，增加运行速度；
+                ④- 为未来新版本的Javascript做好铺垫。</p>
+            <p>★缺点</p>
+            <p>
+                同样的代码，在"严格模式"中，可能会有不一样的运行结果；一些在"正常模式"下可以运行的语句，在"严格模式"下将不能运行　
+            </p>
+
+        </div>
+        <h4>18.闭包？</h4>
+        <div class="Web">
+            <p>★闭包是在另一个函数（称为父函数）中定义的函数，并且可以访问在父函数作用域中声明和定义的变量。</p>
+            <p><span class="sign">作用：</span>可以读取到函数内部的变量 ；让这些变量始终储存在内存里</p>
+            <p>①匿名自执行函数 (function (){ ... })(); 创建了一个匿名的函数，并立即执行它，由于外部无法引用它内部的变量，因此在执行完后很快就会被释放，关键是这种机制不会污染全局对象。</p>
+            <p>②实现封装，③实现模板</p>
+            <p class="sign">闭包可以访问三个作用域中的变量：</p>
+            <p>①在自己作用域中声明的变量；</p>
+            <p>②在父函数中声明的变量；</p>
+            <p>③在全局作用域中声明的变量。</p>
+            <img src="images/eg.png" alt="闭包案例">
+        </div>
+        <h4>19.闭包会产生的问题？怎么解决？</h4>
+        <div class="Web">
+            ①会将函数里的变量保存在内存里，会消耗内存，如果滥用闭包可能会导致网页性能问题。
+            IE可能会导致内存泄漏。②好的做法是在退出函数之前将不用的局部变量全部删除。
+        </div>
+        <h4>20.全局的作用域里的变量怎么使用局部作用域里的变量？</h4>
+        <div class="Web">
+            ★使用闭包。用闭包函数返回父函数的变量，在全局下调用父函数，即可得到这个父函数里的变量。
+        </div>
+        <h4>21.解释 0.1+0.2===0.3 为false？并怎么解决？</h4>
+        <div class="Web">
+            这是由浮点数内部表示导致的。0.1 + 0.2 并不刚好等于 0.3，实际结果是 0.30000000000000004。
+            解决这个问题的一个办法是在对小数进行算术运算时对结果进行舍入。
+        </div>
+        <h4>22.变量声明提升？</h4>
+        <div class="Web">
+            <p>①提升（hoisting）是 JavaScript 解释器将所有变量和函数声明移动到当前作用域顶部的操作。有两种类型的提升：</p>
+            <p>变量提升——非常少见</p>
+            <p>函数提升——更常见</p>
+            <p>★无论 var（或函数声明）出现在作用域的什么地方，它都属于整个作用域，并且可以在该作用域内的任何地方访问它。</p>
+            <img src="images/lift.png" alt="变量提升">
+        </div>
+        <h4>23.js事件模型</h4>
+        <div class="Web">
+            <p class="sign">[拓展]事件流:</p>
+            <p>①事件冒泡(Event Capturing): 是一种从下往上的传播方式。事件最开始由最具体的元素(文档中嵌套层次最深的那个节点接受, 也就是DOM最低层的子节点),
+                然后逐渐向上传播到最不具体的那个节点，也就是DOM中最高层的父节点。</p>
+            <p>②事件捕获(Event Bubbling): 与事件冒泡相反。事件最开始由不太具体的节点最早接受事件, 而最具体的节点最后接受事件。</p>
+            <p class="sign">★原始事件模型(DOM0)：在该模型中，事件不会传播，即没有事件流的概念。事件绑定监听函数比较简单, 有两种方式</p>
+            <img src="images/DOM0.png" alt="DOM0">
+            <p class="sign">★DOM2事件模型：属于W3C标准模型，现代浏览器(除IE6-8之外的浏览器)都支持该模型。在该事件模型中，一次事件共有三个过程:</p>
+            <p>事件捕获阶段->事件处理阶段->事件冒泡</p>
+            <img src="images/DOM2.png" alt="DOM2">
+            <p class="sign">参数说明：</p>
+            <p>①eventType指定事件类型(不要加on)</p>
+            <p>②handler是事件处理函数</p>
+            <p>③useCapture是一个boolean用于指定是否在捕获阶段进行处理，一般设置为false与IE浏览器保持一致 (true:捕获)(false:冒泡)</p>
+            <p class="sign">IE事件模型</p>
+            <p>★IE事件模型共有两个过程: 1.事件处理 2.事件冒泡 (IE事件模型没有捕获)</p>
+            <img src="images/IE-model.png" alt="IE模型">
+            <p class="sign">参数说明</p>
+            <p>①eventType指定事件类型(注意加on)</p>
+            <p>②handler是事件处理函数</p>
+        </div>
+        <h4>24.同步和异步的区别</h4>
+        <div class="Web">
+            <p>★:同步的概念应该是来自于操作系统中关于同步的概念:不同进程为协同完成某项工作而在先后次序上调整(通过阻塞,唤醒等方式)。
+                同步强调的是顺序性，谁先谁后；异步则不存在这种顺序性。
+            </p>
+            <p>①同步：浏览器访问服务器请求，用户看得到页面刷新，重新发请求,等请求完，页面刷新，新内容出现，用户看到新内容,进行下一步操作。</p>
+            <p>②异步：浏览器访问服务器请求，用户正常操作，浏览器后端进行请求。等请求完，页面不刷新，新内容也会出现，用户看到新内容。</p>
+        </div>
+        <h4>25.异步编程的几种方式</h4>
+        <div class="Web sign">
+            <ul class="fath">
+                <li>1.回调函数</li>
+                <li>2.事件监听</li>
+                <li>3.Promises对象</li>
+            </ul>
+            <a href="https://blog.csdn.net/q759859479/article/details/80770315">优秀参考-></a>
+        </div>
+        <h4>26.js中的继承</h4>
+        <div class="Web">
+            <p>1.使用prototype方式继承(原型链继承)</p>
+            <p>2.使用构造函数方式继承</p>
+            <p>3.使用apply方式继承</p>
+            <p>4.使用call方式继承</p>
+        </div>
+        <h4>27.js动画有哪些实现方法</h4>
+        <div class="Web sign">
+            setTimeout和setInterval
+        </div>
+        <h4>28.获取元素的页面坐标（offsetTop，clientHeight）？</h4>
+        <div class="Web">
+            <p>offsetTop和offsetLeft属性返回元素的X和Y坐标</p>
+            <p>★1.相对于已定位元素的后代元素和一些其他元素（表格单元），这些属性返回的坐标是相对于祖先元素</p>
+            <p>★2.一般元素，则是相对于文档，返回的是文档坐标</p>
+            <p>①document.documentElement.clientWidth与document.documentElement.clientHeight：获得的是屏幕可视区域的宽高，
+                不包括滚动条与工具条，跟jquery的(window).width()与(window).height()获得的结果是一样的。</p>
+            <p>★document.documentElement.clientWidth = width + padding</p>
+            <p>★document.documentElement.clientHeight = height + padding</p>
+            <img src="images/offsetTop.png" alt="offsetTop">
+        </div>
+        <h4>29.Js组成部分？</h4>
+        <div class="Web">
+            <p>①ECMAScript：JavaScript的核心，描述了语言的基本语法(var、for、if、array等)和
+                数据类型(数字、字符串、布尔、函数、对象(obj、[]、{}、null)、未定义)，
+                ECMAScript是一套标准，定义了一种语言（比如js）是什么样子
+            </p>
+            <p>②文档对象模型（DOM）：DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）。
+                DOM 将把整个页面规划成由节点层级构成的文档。HTML 或 XML 页面的每个部分都是一个节点的衍生物。</p>
+            <p>③浏览器对象模型（BOM）对浏览器窗口进行访问和操作。</p>
+        </div>
+        <h4>30.js中的垃圾回收机制</h4>
+        <div class="Web">
+            <p>js是一门具有自动垃圾回收机制的编程语言,开发人员不必关心内存分配和回收问题</p>
+            <ul class="fath">
+                <li>1.离开作用域的值将被自动标记为可以回收, 因此将在垃圾收集期间被删除</li>
+                <li>2."标记清除"是目前主流的垃圾收集算法, 这种算法的思路是给当前不使用的值加上标记, 然后再回收其内存</li>
+                <li>3.另一种垃圾收集算法是"引用计数", 这种算法的思想是跟踪记录所有值被引用的次数. js引擎目前都不再使用这种算法, 但在IE中访问非原生JS对象(如DOM元素)时, 这种算法仍然可能会导致问题
+                </li>
+                <li>4.当代码中存在循环引用现象时, "引用计数" 算法就会导致问题</li>
+                <li>5.解除变量的引用不仅有助于消除循环引用现象, 而且对垃圾收集也有好处. 为了确保有效地回收内存, 应该及时解除不再使用的全局对象, 全局对象属性以及循环引用变量的引用</li>
+            </ul>
+        </div>
+        <h4>31.Jquery(document).ready()和window.onload()？</h4>
+        <div class="Web sign">
+            <p>①执行时机：</p>
+            <p>Windows.onload()：网页中的所有元素（包括元素的所有关联文件）都完全加载到浏览器后才执行</p>
+            <p>$(document).ready()：DOM就绪时即可调用</p>
+            <p>②注册事件：</p>
+            <p>$(document).ready()可以多次使用而注册不同的事件处理程序，而window.onload()一次只能保存对一个函数的引用，多次绑定函数只会覆盖前面的函数。</p>
+        </div>
+        <h4>32.函数对象</h4>
+        <div class="Web">
+            <p>①所有引用类型（函数，数组，对象）都拥有__proto__属性（隐式原型）</p>
+            <p>②所有函数拥有prototype属性（显式原型）（仅限函数）</p>
+            <p>③原型对象：拥有prototype属性的对象，在定义函数时就被创建</p>
+        </div>
+        <h4>33.构造函数</h4>
+        <div class="Web">
+            <img src="images/sample.png" alt="实例">
+            <p>:print()方法是w实例本身具有的方法，所以w.print()打印hello world；alert()不属于w实例的方法，属于构造函数的方法，w.alert()也会打印hello
+                world，因为实例继承构造函数的方法。</p>
+            <p>实例w的隐式原型指向它构造函数的显式原型，指向的意思是恒等于</p>
+            <p class="sign">w.__proto__ === Word.prototype</p>
+            <p class="sign">总结：</p>
+            <p class="sign">
+                当调用某种方法或查找某种属性时，首先会在自身调用和查找，如果自身并没有该属性或方法，则会去它的__proto__属性中调用查找，也就是它构造函数的prototype中调用查找。所以很好理解实例继承构造函数的方法和属性：</p>
+        </div>
+        <h4>34.原型和原型链</h4>
+        <div class="Web sign">
+            <p>
+                ①概念：每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。
+            </p>
+            <p>★特点:JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本，当我们修改原型时，与之相关的对象也会继承这一改变。
+                当我们需要一个属性时，JavaScript引擎会先看当前对象中是否有这个属性，如果没有的话，就会查找它的prototype对象是否有这个属性，如此递推下去，一致检索到Object内建对象。
+            </p>
+            <img src="images/proto.png" alt="原型链">
+            <img src="images/__proto__.png" alt="隐式原型">
+            <p class="sign">
+                ①.我们调用constructor属性，p.___proto__.__proto__.constructor得到拥有多个参数的Object()函数，
+                Person.prototype的隐式原型的constructor指向Object()，即Person.prototype.__proto__.constructor == Object()
+                从p.__proto__.constructor返回的结果为构造函数本身得到Person.prototype.constructor == Person()所以
+                p.___proto__.__proto__== Object.prototype
+            </p>
+            <p>
+                ②.所以p.b打印结果为b，p没有b属性，会一直通过__proto__向上查找，最后当查找到Object.prototype时找到，最后打印出b，向上查找过程中，得到的是Object.prototype，而不是Function.prototype，找不到a属性，所以结果为undefined，这就是原型链，通过__proto__向上进行查找，最终到null结束</p>
+            <p class="sign">总结:</p>
+            <ul class="fath">
+                <li> 1.查找属性，如果本身没有，则会去__proto__中查找，也就是构造函数的显式原型中查找，
+                    如果构造函数中也没有该属性，因为构造函数也是对象，也有__proto__，那么会去它的显式原型中查找，
+                    一直到null，如果没有则返回undefined
+                </li>
+                <li>2.p.__proto__.constructor  == function Person(){}</li>
+                <li>3.p.___proto__.__proto__== Object.prototype</li>
+                <li>4.p.___proto__.__proto__.__proto__== Object.prototype.__proto__ == null</li>
+                <li>5.通过__proto__形成原型链而非protrotype</li>
+            </ul>
+            <img src="images/prototype1.png" alt="原型链解析">
+            <a href="http://localhost:63342/index/blog/test/JS-test.html?_ijt=io5ckn8sm906c8mai8g3oeghmb">优秀参考</a>
+        </div>
+        <h4>35.创建对象的方式有哪些</h4>
+        <div class="Web sign">
+            <p>①.对象字面量:var person={firstname:"Mark",lastname:"Yun",age:25,eyecolor:"black"};</p>
+            <p>②.Object方式:var person=new Object();</p>
+            <p>③.Object.create方式:var person=Object.create({}/null);</p>
+            <p>④.工厂模式:</p>
+            <img src="images/plant.png" alt="工厂模式">
+            <p>⑤.构造函数模式:</p>
+            <img src="images/create.png" alt="构造函数模式">
+            <p>⑥.原型模式:</p>
+            <img src="images/prototype.png" alt="原型">
+            <p>⑦.混合模式(结合构造函数和原型):</p>
+            <img src="images/blend.png" alt="混合模式">
+            <a href="https://segmentfault.com/a/1190000017113168">优秀参考</a>
+        </div>
+        <h4>36.js有哪些内置对象</h4>
+        <div class="Web">
+            <p>①Object 是 JavaScript 中所有对象的父对象</p>
+            <p>②数据封装类对象：Object、Array、Boolean、Number、String</p>
+            <p>③其他对象：Function、Argument、Math、Date、RegExp、Error</p>
+        </div>
+        <h4>37.面向对象有哪几个特点</h4>
+        <div class="Web">
+            封装，继承，多态
+        </div>
+        <h4>38.new操作符做了什么</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li>(1)创建一个空对象</li>
+                <li>(2)将构造函数的作用域赋给新对象(因此this就指向一这个新对象)</li>
+                <li>(3)执行构造函数中的代码（为这个新对象添加属性,属性和方法被加入到 this 引用的对象中）</li>
+                <li>(4)返回新对象（默认返回当前对象，除非有显示返回某个对象）</li>
+            </ul>
+        </div>
+        <h4>39.eval是做什么的？</h4>
+        <div class="Web">
+            <p>把对应的字符串解析成JS代码并运行。 alert(eval('2'+'2')) //alert(4)</p>
+            <p>应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。</p>
+            <p>JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')')。</p>
+        </div>
+        <h4>40.如何判断属性来自自身对象还是原型链?</h4>
+        <div class="Web">
+            <p>JavaScript 中 hasOwnProperty 函数方法是返回一个布尔值，
+                指出一个对象是否具有指定名称的属性。此方法无法检查该对象的原型链中是否具有该属性；
+                该属性必须是对象本身的一个成员。</p>
+            <p>
+                使用方法：object.hasOwnProperty(proName)其中参数object是必选项，一个对象的实例。proName是必选项，一个属性名称的字符串值。
+                如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty函数方法返回 true，反之则返回 false。
+
+            </p>
+        </div>
+        <h4>41.试写出大于1024并小于1360屏幕的媒体查询关键CSS代码</h4>
+        <div class="Web">
+            if ((screen.width == 1360) && (screen.height == 1024)){
+            setActiveStyleSheet(CSS1);
+            }
+        </div>
+        <hr>
+        <p>Data:2018 . 9/ 26</p>
+    </div>
+    <!--回到顶部-->
+    <a id="scrollTopBtn"><img src="images/top.png"></a>
+</section>
+<!--end section-->
+<script src="../../bootstrap/js/jquery-1.12.4.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+    // jQuery部分
+    $(function () {
+        // 切换页面
+        $("#icon-row").on("click", function () {
+            $("#sidebar").toggleClass("fullscreen");
+            $(this).toggleClass("icon_row_a");
+        });
+
+        //aside 菜单
+        $(".accordion").mousedown(function () {
+            $(this).siblings(".panel1").slideToggle(500).parent()
+                .siblings().children(".panel1").slideUp(500);
+        });
+
+        //返回顶部
+        $("#scrollTopBtn").click(function () {
+            $("section").animate({scrollTop: 0}, 800);
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

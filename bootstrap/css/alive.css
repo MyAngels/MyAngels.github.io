@@ -1,0 +1,62 @@
+.enjoy{
+    margin-top:20px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+/*活着*/
+.footer{
+    margin-top:50px;
+    line-height:2;
+}
+
+
+/*test*/
+.details > h4 {
+    color: #2B5286;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 30px;
+}
+
+.details > .Web {
+    margin-left: 20px;
+    width: 90%;
+    height: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e2e2;
+    line-height:1.8;
+}
+
+#scrollTopBtn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 80px;
+    bottom: 100px;
+    z-index: 999;
+}
+/*Web技术原理样式*/
+
+.details .browser,.details .fath{
+    margin-top:20px;
+}
+.details .fath{
+    padding-left:20px;
+}
+.details .browser li{
+    margin-top:20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+/*CSS一样式*/
+.details .sign{
+    color: rgba(0, 0, 0, 0.77);
+    font-weight: bold;
+    list-style: none;
+}
+.details .fath li{
+    list-style: square;
+    margin-top:10px;
+
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目经历</title>
+    <link rel="icon" href="../images/022.ico"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /*导航*/
+        nav {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 8px 2px #b8b8b8;
+        }
+
+        nav > h3 {
+            margin-left: 30px;
+            color: #8E8E8E;
+            font-family: "游ゴシック", YuGothic, "メイリオ", "ヒラギノ角ゴ ProN W3";
+
+        }
+
+        /*轮播*/
+        .tab {
+            position: absolute;
+            right:80px;
+            z-index:1000;
+        }
+
+        #icon > span {
+            display: inline-block;
+            margin-left: 10px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #d2d2d2;
+
+        }
+
+        .icon_a {
+            background: #8FA7C7;
+        }
+
+        #right {
+            cursor: pointer;
+
+        }
+
+        /*内容*/
+        .wrapper{
+            margin: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .wrap {
+            width:95%;
+            padding: 50px;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+        }
+
+        .wrap .whole {
+            width: 45%;
+            padding: 20px;
+        }
+
+        .wrap .whole:hover {
+            box-shadow: 2px 4px 9px 4px #cecece;
+        }
+
+        .wrap:nth-of-type(2) {
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: -99;
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<nav>
+    <a href="../index.html"><img src="../images/blog/left.png" alt="返回"></a>
+    <h3>项目经历</h3>
+</nav>
+
+<!--轮播-->
+<div id="icon" class="tab">
+    <span class="icon_a"></span>
+    <span></span>
+    <img id="right" src="../images/right1.png" alt="right">
+</div>
+
+<!--content 内容-->
+<div class="wrapper">
+
+
+    <div class="wrap">
+        <img src="../images/blog/show.png" alt="">
+        <div class="whole">
+            <h4>沃洋优品FTZWO</h4>
+            <p>★负责沃洋优品 FTZWO 商城前端页面开发与设计/p>
+            <p>★并兼任页面的布局排版任责商城前端开发与设计，配合后端人员完成页面整体功
+                能的实现。
+            </p>
+            <p>★参考各大优秀微信商城，‘友单’分销微商城，‘中博’微分销，等各大商城，进行
+                改进排版，比较功能实现完成前端页面
+            </p>
+            <p>★使用 Axure PS AI 进行页面的设计，筛选适合的前端框架进行开发，通过开发小
+                组之间的探讨进行改进优化页面以及功能，赏心悦目的页面排版和优良的用户体
+                验大大提升了商城产品的销量
+            </p>
+            <p>★通过微信商城了解到移动端开发与 PS 端之间的差别，学到适合不同设备的开发技
+                能。
+            </p>
+            <p><img src="../images/FTZWO.png" alt="沃洋优品"></p>
+        </div>
+
+    </div>
+    <div class="wrap">
+        <img src="../images/blog/show2.png" alt="">
+        <div class="whole">
+            <h4>贝思克办公</h4>
+            <p>★主要负责商城各个页面的平面设计和UI设计</p>
+            <P>★并兼任页面的布局排版任责商城前端开发与设计，同小组开发人员交流沟通进一步优化页面以及兼容性问题</P>
+            <p>★通过整体参考商城的整体销售产品倾向定位商城整体风格</p>
+            <p>★使用 PS AI Axure 排版布局，制作logo</p>
+            <p>★通过此次商城项目，使自己对于前端的整体排版布局以及风格定位有了全新的认识,从而知道选择开发移动端框架的重要性</p>
+            <p><img src="../images/BSK.png" alt="贝思克"></p>
+        </div>
+
+    </div>
+</div>
+
+<script src="../bootstrap/js/jquery-1.12.4.min.js"></script>
+<script>
+    $(function () {
+        var count = 0;
+        $("#right").on("click", function () {
+            count++;
+            if (count === 2) {
+                count = 0;
+            }
+            $(".wrap").eq(count).fadeIn().siblings(".wrap").fadeOut();
+            $("#icon span").eq(count).addClass("icon_a").siblings().removeClass("icon_a");
+        });
+    });
+</script>
+</body>
+</html>

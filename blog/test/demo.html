@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+
+<script>
+    // Function.prototype.a = "a";
+    // Object.prototype.b = "b";
+    // function Person(){}
+    // console.log(Person);    //function Person()
+    // let p = new Person();
+    // console.log(p);         //Person {} 对象
+    // console.log(p.a);       //undefined
+    // console.log(p.b);       //b
+
+    //创建构造函数
+    // function Word(words){
+    //     this.words = words;
+    // }
+    // Word.prototype = {
+    //     alert(){
+    //         alert(this.words);
+    //     }
+    // };
+    // //创建实例
+    // var w = new Word("hello world");
+    // w.print = function(){
+    //     console.log(this.words);
+    //     console.log(this);  //Person对象
+    // };
+    // w.print();  //hello world
+    // w.alert();  //hello world
+
+    function f1(n, callback) {
+        setTimeout(function () {
+            var count = 0,
+                i, j;
+
+            for (i = n; i > 0; --i) {
+                for (j = n; j > 0; --j) {
+                    count += 1;
+                }
+            }
+            console.log(1);
+
+        }, 1000);
+        callback();
+        console.log(2);
+    }
+
+    function f2() {
+        console.log("函数f2");
+    }
+
+
+    function f3() {
+        setTimeout(function () {
+            console.log(6)
+        }, 1000);
+
+        console.log(5);
+        console.log(13);
+
+    }
+
+    f1(100000, f3);
+    f2();
+    f3();
+
+</script>
+
+</body>
+</html>

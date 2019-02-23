@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "游ゴシック", YuGothic, "メイリオ", "ヒラギノ角ゴ ProN W3";
+    letter-spacing: 5px;
+    /*font-size: 16.5px;*/
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #f5f5f5;
+    border-left: 1px solid #d2d2d2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E3CA8A;
+    background-clip: padding-box;
+    border: 1px solid rgba(99, 99, 99, 0.64);
+    min-height: 28px;
+    border-radius: 3px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 1px solid rgba(99, 99, 99, 0.64);
+    background-color: #E3CA8A;
+
+}
+
+::-webkit-scrollbar-thumb:active {
+    border: 1px solid rgba(99, 99, 99, 0.64);
+    background-color: #E3CA8A;
+}
+
+p {
+    margin: 0 !important;
+}
+
+/*整体边框*/
+html, body {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+aside, section, section > .post_intro {
+    display: block;
+}
+
+/*aside*/
+#sidebar {
+    transition: margin-left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+aside {
+    width: 340px;
+    height: 100%;
+    float: left;
+    padding-left: 20px;
+    background: #F1EEE7;
+    color: #646464;
+}
+
+/*nav 头像*/
+#tags {
+    height: 100%;
+    position: relative;
+}
+
+#tags > a {
+    text-decoration: none;
+}
+
+#tags > a > img {
+    margin-top: 20px;
+    width: 140px;
+    height: 140px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 0 rgba(8, 8, 8, 0.21);
+}
+
+#tags > a > span {
+    font-size: 17px;
+    color: #646464;
+    margin: 20px 0;
+    vertical-align: bottom;
+}
+
+/*菜单*/
+#tags_ul > #tags_li {
+    margin-top: 40px;
+}
+
+/*弹性折叠菜单*/
+#tags_ul > #tags_li > .read > div > ul li {
+    padding-left: 120px;
+}
+
+button.accordion {
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+
+#tags_ul > #tags_li > .read > div > ul > .group > button:hover {
+    /*border: 1px slateblue solid;*/
+    cursor: url("../../images/blog/加号.png"), default;
+
+}
+
+div.panel1 {
+    height: auto;
+    padding: 0 38px;
+    background: none;
+    max-height: 300px;
+    overflow: hidden;
+    display: none;
+    /*margin: 5px 0;*/
+    border: none;
+}
+
+div.panel1 > p {
+    margin-top: 10px;
+    /*border: 1px solid darkred;*/
+    padding-top: 5px
+}
+
+div.panel1 > p > a {
+    font-size: 12px;
+    color: #646464;
+    text-decoration: none;
+}
+
+div.panel1.show {
+    opacity: 1;
+    max-height: 500px;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+/*友情链接*/
+aside > #tags > .icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+}
+
+/*section*/
+section > .banner, section > .post_a:nth-of-type(2), section > .post_a:nth-of-type(3) {
+    width: 100%;
+}
+
+section {
+    padding: 0 7% 0;
+    height: 100%;
+    color: #646464;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    cursor: url("../../images/cursor.png"), default;
+
+}
+
+section > .post_a:nth-of-type(1) {
+    margin: 20px 0 0;
+}
+
+/*旋转页面按钮*/
+.icon-row {
+    position: relative;
+    z-index: 100000;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url("../../images/blog/转换.png") no-repeat;
+    transform: rotate(45deg);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1)
+
+}
+
+.icon_row_a {
+    transform: rotate(-145deg);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url("../../images/blog/转换.png") no-repeat;
+}
+
+/*section Welcome*/
+section > .post_a:first-child {
+    position: relative;
+
+}
+
+section .banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+
+}
+
+section > .post_a:nth-of-type(1) > .banner p:nth-of-type(1) {
+    margin: 0;
+    flex: 1;
+}
+
+section > .post_a:nth-of-type(1) > .banner p:nth-of-type(2) {
+    flex: 2;
+    margin-left: -10px;
+}
+
+section > .post_a:nth-of-type(1) > .banner > #text {
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    writing-mode: vertical-lr;
+    line-height: 3;
+
+}
+
+section > .post_a:nth-of-type(1) > .text > p > span {
+    background: #ffffff;
+}
+
+section .banner p img {
+    width: 100%;
+}
+
+/*section Details*/
+section > .post_a:nth-of-type(2) {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+section > .post_a:nth-of-type(2) > .details {
+    flex: 3;
+    writing-mode: vertical-lr;
+    line-height: 3;
+
+}
+
+section > .post_a:nth-of-type(2) > p:nth-of-type(1) {
+    flex: 1;
+}
+
+section > .post_a:nth-of-type(2) > p:nth-of-type(2) {
+    flex: 2;
+    padding: 0 50px;
+    margin-right: 50px;
+}
+
+section > .post_a:nth-of-type(2) > p:nth-of-type(2) > img {
+    width: 100%;
+}
+
+/*About*/
+section > .post_b {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+section > .post_b > p {
+    flex: 2;
+}
+
+section > .post_b > .about {
+    flex: 2;
+    padding-left: 100px;
+    line-height: 3;
+}
+
+/*work*/
+section > .work {
+    margin-bottom: 30px;
+}
+
+section > .work > p > img {
+    width: 100%;
+}
+
+.work_a {
+    color: #000000;
+    font-size: 18px;
+}
+
+.work_b {
+    color: #000000;
+}
+
+#sidebar.fullscreen {
+    margin-left: -410px;
+}
+
+section > .post_a > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*container*/
+.wrap {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 200000;
+    width: 100%;
+    height: 100%;
+    background: #F1EEE7;
+    line-height: 2.8;
+    display: none;
+    /*border: 1px solid darkred;*/
+}
+
+.wrap > .head > .modal-body {
+    padding: 0;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #F1EEE7;
+}
+.wrap > .head > ul > li .images{
+    max-width:70%;
+}
+
+.wrap > .head > .modal-body > li:nth-of-type(1) > span:nth-child(1) {
+    font-size: 28px;
+}
+
+.wrap > .head > .modal-body {
+    font-size: 16px;
+}
+
+.wrap > .head > ul > li:nth-of-type(2) > img {
+    width: 100%;
+}
+
+.wrap > .head > .icon::before {
+    float: right;
+    margin: 30px 30px 0 0;
+    content: url("../../images/blog/叉号.png");
+}
+
+.wrap > .head > .icon_a::before {
+    float: right;
+    content: url("../../images/blog/叉号1.png");
+}
+
+section footer {
+    font-size: 17px;
+    margin: 50px 0;
+
+}
+
+section footer a:hover {
+    text-decoration: none;
+}
+
+/*响应式*/
+
+@media screen and (max-width: 1420px) {
+    aside {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+    section {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    section > .post_b > p {
+        flex: 1;
+    }
+
+    section > .post_b > .about {
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    section > .post_a:nth-of-type(2) > p:nth-of-type(2) > img {
+        width: 0;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    section > .post_a:nth-of-type(2) {
+        flex-wrap: wrap;
+    }
+
+    section > .post_a:nth-of-type(1) > .banner > #text {
+        line-height: 1.8;
+
+    }
+}
+
+@media screen and (max-width: 640px) {
+    * {
+        font-size: 13px;
+    }
+
+    section > .post_b {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+    }
+
+    .work > p {
+        display: none;
+    }
+
+    section > .post_b > .about {
+        padding-left: 0;
+    }
+
+    section > .post_a:nth-of-type(1) > .banner > #text {
+        line-height: 1.8;
+
+    }
+
+    .wrap > .head > .modal-body > p > img {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section > .post_a:nth-of-type(1) > .banner > #text {
+        line-height: 1.6;
+        width: 90%;
+        height: 140px;
+        top: 0;
+    }
+
+    section > .post_a:nth-of-type(1) > .banner > img {
+        display: none;
+    }
+
+}

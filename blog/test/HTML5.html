@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5-test</title>
+    <link rel="icon" href="../../images/022.ico"/>
+    <link rel="stylesheet" href="../../bootstrap/css/blog.css">
+    <link rel="stylesheet" href="../../bootstrap/css/alive.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<!--aside-->
+<aside id="sidebar" class="">
+    <!--侧边栏-->
+    <nav id="tags">
+        <!--头像-->
+        <a href="../blog.html" id="header">
+            <img src="../../images/bio.jpg" alt="头像">
+            <span>南风知我意</span>
+        </a>
+        <!--菜单-->
+        <ul id="tags_ul">
+            <li id="tags_li">
+                <div class="read">
+                    <div class="" style="display: block;">
+                        <ul>
+                            <li class="group">
+                                <button class="accordion">书海无涯</button>
+                                <div class="panel1">
+                                    <p><a href="../book/alive.html">活着感想</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">日常博文</button>
+                                <div class="panel1">
+                                    <p><a href="../article/360.html">物体360°旋转</a></p>
+                                    <p><a href="../article/BooK-superMarket.html">jquery小练习</a></p>
+                                    <p><a href="../article/animate.html">animate动画</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">前端面试题</button>
+                                <div id="foo" class="panel1">
+                                    <p><a href="Web-theory.html">Web理论</a></p>
+                                    <p><a href="Web-skill.html">Web技能原理</a></p>
+                                    <p><a href="CSS3.html">CSS系列</a></p>
+                                    <p><a href="HTML5.html">HTMl5系列</a></p>
+                                    <p><a href="JS-test.html">JS系列</a></p>
+                                </div>
+                            </li>
+                            <li class="group">
+                                <button class="accordion">向JS致敬</button>
+                                <div id="" class="panel1">
+                                    <p><a href="#">es6学习</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--分享链接-->
+        <ul class="icon">
+            <li class="icon_a"><a href=""><img src="../../images/blog/github.png" alt="gitHub"></a></li>
+            <li class="icon_a"><a href="../book/add_me.html"><img src="../../images/blog/微信.png" alt="微信"></a></li>
+            <li class="icon_a"><a href="mailto:3268604623@qq.com"><img src="../../images/blog/邮箱.png" alt="邮箱"></a></li>
+        </ul>
+    </nav>
+</aside>
+<!--end aside-->
+
+<!--section-->
+<section>
+    <div class="enjoy">
+        <h3>HTML5基础面试题大全</h3>
+        <p><a href="#" id="icon-row" class="icon-row"></a></p>
+    </div>
+    <div class="details">
+        <h4>1.HTML5的新特性</h4>
+        <div class="Web">
+            <p>①<span class="sign">语义化:</span> article, nav , footer, section, aside, hgroup，等.</p>
+            <p>②<span class="sign">新增画布canvas:</span> HTML5(canvas)元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成</p>
+            <p>③<span class="sign">video，audio</span>的增加使得我们不需要在依赖外部的插件就可以往网页中加入音视频元素</p>
+            <p>④<span class="sign">新增表单元素:</span>email，url等，除去了center等样式标签，还有除去了有性能问题的frame，frameset等标签</p>
+            <div class="Web">
+                <ul class="fath">
+                    <li class="sign">⑤新属性:</li>
+                    <li>contextmenu当用户右击元素时将显示上下文菜单</li>
+                    <li>contentEditable可编辑</li>
+                    <li>hidden隐藏</li>
+                    <li>draggable拖拽</li>
+                    <li>data-* 日期</li>
+                    <li>placeholder占位属性</li>
+                    <li>required必填属性</li>
+                    <li>pattern正则属性</li>
+                    <li>autofocus自动聚焦属性</li>
+                    <li>autocomplete自动完成属性</li>
+                    <li>novalidate不验证属性</li>
+                    <li>multiple多选属性</li>
+                </ul>
+            </div>
+
+            <p> ⑥<span class="sign">新增很多api:</span>比如获取用户地理位置的window.navigator.geoloaction，
+                拖放 ondrag ondrop
+                关闭页面 onunload
+                窗口大小改变 onresize
+                取消了一些元素: font center等</p>
+            <p>⑦<span class="sign">websocket</span>
+                websocket是一种协议，可以让我们建立客户端到服务器端的全双工通信，这就意味着服务器端可以主动推送数据到客户端
+            </p>
+            <p>
+                ⑧<span>webstorage:</span>webstorage是本地存储，存储在客户端，包括localeStorage和sessionStorage，localeStorage是持久化存储在客户端，只要用户不主动删除，就不会消失，sessionStorage也是存储在客户端，但是他的存在时间是一个回话，一旦浏览器的关于该回话的页面关闭了，sessionStorage就消失了
+            </p>
+        </div>
+        <h4>2.HTML5移除的元素</h4>
+        <div class="Web">
+            <p>纯表现的元素：basefont，big，center，font, s，strike，tt，u;</p>
+            <p>对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+        </div>
+        <h4>3.处理HTML5新标签的浏览器兼容问题</h4>
+        <div class="Web">
+            <p>支持HTML5新标签： IE8/IE7/IE6支持通过document.createElement方法产生的标签， 可以利用这一特性让这些浏览器支持HTML5新标签，
+                浏览器支持新标签后，还需要添加标签默认的样式。</p>
+            <p>当然也可以直接使用成熟的框架、比如html5shim:</p>
+            <img src="images/html5shim.png" alt="html5">
+        </div>
+        <h4>4.什么是语义化的html</h4>
+        <div class="Web">
+            :html5的语义化指的是用正确的标签包含正确的内容，
+            比如nav标签，里面就应该包含导航条的内容，而不是用做其他的用途，标签语义化的好处就是结构良好，
+            便于阅读，方便威化，也有利于爬虫的查找，提高搜索率。
+        </div>
+        <h4>5.使用XHTML的局限有哪些</h4>
+        <div class="Web">
+            XHTML较为严格，标签必须闭合，必须要body，head等
+            如果页面使用 'application/xhtml+xml' 一些老的浏览器并不兼容
+        </div>
+        <h4>6.区分 HTML 和 HTML5</h4>
+        <div class="Web">
+            ①DOCTYPE声明 ②新增的结构元素 ③功能元素
+        </div>
+        <h4>7.XHTML和HTMl的区别</h4>
+        <div class="web">
+            TML与XHTML之间的差别，主要分为功能上的差别和书写习惯的差别两方面。
+            关于功能上的差别，主要是XHTML可兼容各大浏览器、手机以及PDA，并且浏览器也能快速正确地编译网页。
+            由于XHTML的语法较为严谨，所以如果你是习惯松散结构的HTML编写者，那需要注意XHTML的规则。
+        </div>
+        <h4>8.html的全局属性有哪些</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li>class：为元素设置类标识</li>
+                <li>data-**：为元素添加自定义属性</li>
+                <li>draggable：设置元素是否可以拖曳</li>
+                <li>id：元素的id，同一个id文档内是唯一的</li>
+                <li>style：元素样式</li>
+                <li>title：鼠标上移显示信息</li>
+            </ul>
+        </div>
+        <h4>9.cookies，sessionStorage 和 localStorage的区别</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li class="sign">cookie：</li>
+                <li>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。</li>
+                <li>cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。</li>
+                <li>sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存</li>
+                <li class="sign">存储大小：</li>
+                <li>cookie数据大小不能超过4k。</li>
+                <li>sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</li>
+                <li class="sign">有期时间：</li>
+                <li>localStorage:存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；</li>
+                <li>sessionStorage:数据在当前浏览器窗口关闭后自动删除。</li>
+                <li>cookie:设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭</li>
+                <li class="sign">作用域不同:</li>
+                <li>sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；</li>
+                <li>localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的</li>
+                <li>Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。</li>
+                <li>Web Storage 的 api 接口使用更方便</li>
+            </ul>
+        </div>
+        <h4>10.浏览器本地存储与服务器端存储之间的区别</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li>其实数据既可以在浏览器本地存储，也可以在服务器端存储</li>
+                <li>浏览器端可以保存一些数据，需要的时候直接从本地获取，sessionStorage、localStorage和cookie都由浏览器存储在本地的数据。</li>
+                <li>服务器端也可以保存所有用户的所有数据，但需要的时候浏览器要向服务器请求数据</li>
+                <li>1.服务器端可以保存用户的持久数据，如数据库和云存储将用户的大量数据保存在服务器端</li>
+                <li>2.服务器端也可以保存用户的临时会话数据。服务器端的session机制，如jsp的 session 对象，数据保存在服务器上。实现上，服务器和浏览器之间仅需传递session
+                    id即可，服务器根据session
+                </li>
+                <li>id找到对应用户的session对象。会话数据仅在一段时间内有效，这个时间就是server端设置的session有效期。</li>
+                <li>服务器端保存所有的用户的数据，所以服务器端的开销较大，而浏览器端保存则把不同用户需要的数据分布保存在用户各自的浏览器中。</li>
+                <li>浏览器端一般只用来存储小数据，而服务器可以存储大数据或小数据。</li>
+                <li>服务器存储数据安全一些，浏览器只适合存储一般数据</li>
+            </ul>
+        </div>
+        <h4>11.HTML5标签的作用?(用途)</h4>
+        <div class="Web">
+            <p>1.结构更好，更利于搜索引擎的抓取（SEO的优化）和开发人员的维护(可维护性更高，因为结构清晰,so易于阅读)。</p>
+            <p>2.更有利于特殊终端的阅读(手机，个人助理等）</p>
+        </div>
+        <h4>12.对Canvas理解以及和SVG的区别</h4>
+        <div class="Web">
+            <p><span>canvas:</span>是HTML5中新增一个HTML5标签与操作canvas的javascript API，它可以实现在网页中完成动态的2D与3D图像技术。</p>
+            <p><span>SVG:</span>可缩放矢量图形（Scalable Vector Graphics）是基于可扩展标记语言（XML），用于描述二维矢量图形的一种图形格式。</p>
+            <p>注: SVG 绘图很容易编辑与生成，但功能明显要弱一些。
+                canvas可以完成动画、游戏、图表、图像处理等原来需要Flash完成的一些功能。
+            </p>
+            <ul class="fath">
+                <li class="sign">区别</li>
+                <li>Canvas支持分辨率, SVG不支持</li>
+                <li>Canvas不支持事件处理器, SVG支持</li>
+                <li>Canvas只有弱的文本渲染能力, 而SVG最适合带有大型渲染区域的应用程序(比如谷歌地图)</li>
+                <li>Canvas能够以.png或.jpg格式保存结果图像</li>
+                <li>SVG的复杂度过高的话会减慢渲染速度(任何过度使用DOM的应用都不快)</li>
+                <li>Canvas最适合图像密集型的游戏, 其中的许多对象会被频繁重绘. 而SVG不适合游戏应用</li>
+            </ul>
+        </div>
+        <h4>13.HTML5的form如何关闭自动完成功能？</h4>
+        <div class="Web">
+            给不想要提示的 form 或某个 input 设置为 autocomplete=off。
+        </div>
+        <h4>14.data-*的作用</h4>
+        <div class="Web">
+            <p>1.html5规范里增加了一个自定义data属性</p>
+            <p>
+                2.data-为前端开发者提供自定义的属性，这些属性集可以通过对象的dataset属性获取，不支持该属性的浏览器可以通过，getAttribute方法获取。ppk提到过使用rel属性，lightbox库推广了rel属性，HTML5提供了data-做替代，这样可以更好
+                地使用自定义的属性</p>
+            <p>3.需要注意的是，data-之后的以连字符分割的多个单词组成的属性，获取的时候使用驼峰风格</p>
+            <p>使用参考：</p>
+            <img src="images/data.png" alt="data-*">
+        </div>
+        <h4>15.Label的作用是什么？是怎么用的？</h4>
+        <div class="Web">
+            label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件
+        </div>
+        <h4>16.如何实现浏览器内多个标签页之间的通信？</h4>
+        <div class="Web">
+            <p>WebSocket、SharedWorker、 也可以调用localstorge、cookies等本地存储方式</p>
+        </div>
+        <h4>17.webSocket如何兼容低浏览器？(阿里)</h4>
+        <div class="Web">
+            Adobe Flash Socket 、
+            ActiveX HTMLFile (IE) 、
+            基于 multipart 编码发送 XHR 、
+            基于长轮询的 XHR
+        </div>
+        <h4>18.实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果</h4>
+        <div class="Web">
+            <div style="height:1px;overflow:hidden;background:#3b4b4f"></div>
+        </div>
+        <h4>19.src和href的区别</h4>
+        <div class="Web">
+            <p>src指向外部资源的位置, 用于替换当前元素, 比如js脚本, 图片等元素</p>
+            <p>href指向网络资源所在的位置, 用于在当前文档和引用资源间确定联系, 加载css</p>
+        </div>
+        <h4>20.iframe是什么？有什么缺点？</h4>
+        <div class="Web">
+            定义：iframe元素会创建包含另一个文档的内联框架
+            <p>提示：可以将提示文字放在iframe标签内容中，来提示某些不支持iframe的浏览器</p>
+            <p class="sign">缺点</p>
+            <p>会阻塞主页面的onload事件， 搜索引擎无法解读这种页面，不利于SEO</p>
+            <p>iframe和主页面共享连接池，而浏览器对相同区域有限制所以会影响性能。</p>
+        </div>
+        <h4>21.如果把 HTML5 看作做一个开放平台，那它的构建模块有哪些</h4>
+        <div class="Web">
+            <ul class="fath">
+                <li>语义 - 允许您更准确地描述您的内容。</li>
+                <li>连通性 - 允许您以新的和创新的方式与服务器通信。</li>
+                <li>离线和存储 - 允许网页在本地存储客户端数据并更有效地脱机运行。</li>
+                <li>多媒体 - 在Open Web中制作视频和音频一等公民</li>
+                <li>2D / 3D图形和效果 - 允许更多样化的演示选项。</li>
+                <li>性能和集成 - 提供更高的速度优化和更好的计算机硬件使用。</li>
+                <li>设备访问 - 允许使用各种输入和输出设备。</li>
+                <li>造型 - 让作者写出更复杂的主题。</li>
+            </ul>
+        </div>
+        <h4>22.如果网页内容需要多语言,要怎么做</h4>
+        <div class="Web">
+            答: 采用统一编码utf-8模式
+            <img src="images/charset.png" alt="字符集">
+        </div>
+        <hr>
+        <p>Data:2018 . 9/ 28</p>
+    </div>
+    <!--回到顶部-->
+    <a id="scrollTopBtn"><img src="images/top.png"></a>
+
+</section>
+<!--end section-->
+<script src="../../bootstrap/js/jquery-1.12.4.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+    // jQuery部分
+    $(function () {
+        // 切换页面
+        $("#icon-row").on("click", function () {
+            $("#sidebar").toggleClass("fullscreen");
+            $(this).toggleClass("icon_row_a");
+        });
+
+        //aside 菜单
+        $(".accordion").mousedown(function () {
+            $(this).siblings(".panel1").slideToggle(500).parent()
+                .siblings().children(".panel1").slideUp(500);
+        });
+
+        //返回顶部
+        $("#scrollTopBtn").click(function () {
+            $("section").animate({scrollTop: 0}, 800);
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
